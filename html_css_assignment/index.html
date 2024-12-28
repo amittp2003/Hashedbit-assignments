@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Development Tools & Frameworks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #f0f2f5;
+            color: #2c3e50;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            font-size: 2rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Menu Bar Styles */
+        nav {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        /* Main Content Layout */
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 280px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .sidebar h2 {
+            margin-bottom: 1rem;
+            color: #1565c0;
+            font-size: 1.2rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            color: #546e7a;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar li:hover {
+            color: #1565c0;
+            padding-left: 0.5rem;
+        }
+
+        /* Main Content Styles */
+        main {
+            flex: 1;
+        }
+
+        .content-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .box {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .box-content {
+            padding: 1.5rem;
+        }
+
+        .box h3 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .box p {
+            color: #546e7a;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .box .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+            }
+            
+            .content-boxes {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="logo-icon">🤖</span>
+            AIDevTools
+        </div>
+        <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">Discord</a>
+            <a href="#">Dev.to</a>
+        </div>
+    </header>
+
+    <!-- Menu Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Community</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Popular Categories</h2>
+            <ul>
+                <li>Machine Learning Frameworks</li>
+                <li>Neural Network Libraries</li>
+                <li>Natural Language Processing</li>
+                <li>Computer Vision Tools</li>
+                <li>Model Training Platforms</li>
+                <li>Data Preprocessing Tools</li>
+                <li>AI Model Deployment</li>
+                <li>AutoML Solutions</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <div class="content-boxes">
+                <!-- TensorFlow Box -->
+                <div class="box">
+                    <img src="tf2.png" alt="TensorFlow Dashboard">
+                    <div class="box-content">
+                        <h3>TensorFlow 2.0</h3>
+                        <p>Open-source machine learning framework developed by Google Brain team. Perfect for deep learning and neural network development with eager execution and Keras integration.</p>
+                        <div class="tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Google</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PyTorch Box -->
+                <div class="box">
+                    <img src="pyt.png" alt="PyTorch Interface">
+                    <div class="box-content">
+                        <h3>PyTorch</h3>
+                        <p>Dynamic neural network framework with strong GPU acceleration. Popular in research communities for its flexible architecture and intuitive Python interface.</p>
+                        <div class="tags">
+                            <span class="tag">Neural Networks</span>
+                            <span class="tag">Facebook</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hugging Face Box -->
+                <div class="box">
+                    <img src="hf.png" alt="Hugging Face Transformers">
+                    <div class="box-content">
+                        <h3>Hugging Face</h3>
+                        <p>State-of-the-art natural language processing library. Features thousands of pretrained models and easy integration with popular deep learning frameworks.</p>
+                        <div class="tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">Transformers</span>
+                            <span class="tag">Community</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>AIDevTools provides comprehensive resources for AI developers, from beginners to experts. Join our community to stay updated with the latest in AI development tools and frameworks.</p>
+        <p>&copy; 2024 AIDevTools. Empowering AI Development.</p>
+    </footer>
+</body>
+</html>

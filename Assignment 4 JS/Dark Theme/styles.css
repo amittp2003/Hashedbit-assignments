@@ -1,0 +1,46 @@
+/* styles.css */
+.day {
+    background-color: white;
+    color: black;
+}
+
+.night {
+    background-color: black;
+    color: gold;
+}
+
+.button_night {
+    background-color: darkblue;
+    color: white;
+}
+
+.button_day {
+    background-color: white;
+    color: black;
+}
+
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+#app {
+    height: 100%;
+    padding: 10px;
+}
+
+/* Additional styling for better presentation */
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
